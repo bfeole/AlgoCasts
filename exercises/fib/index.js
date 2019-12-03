@@ -8,6 +8,18 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+// Runtime - linear runtime, for every increase in n we will increase run time
+
+function fib(n) {
+  result = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    const a = result[i - 1];
+    const b = result[i - 2];
+
+    result.push(a + b);
+  }
+  return result[n];
+  //   return result[result.length -1];
+}
 
 module.exports = fib;
