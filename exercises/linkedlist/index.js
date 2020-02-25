@@ -35,6 +35,47 @@ class LinkedList {
         }
         return counter;
     }
+    /// return the first node of the LL (head)
+    getFirst() {
+        return this.head;
+    }
+
+    /// return the last node in the LL
+    getLast() {
+        if (!this.head){
+            return null;
+        }
+        
+        // give reference to the node
+        let node = this.head;
+        // loops through list and checks if node exists
+        while (node) {
+            // if next is null we're at end of list
+            if (!node.next){
+                // if not defined (null/end) return node
+                return node;
+            }
+            // if it is defined, advance while loop and check node.next value 
+            node = node.next;
+        }
+    }
+
+    /// remove nodes from LL
+    // breaks connection between nodes/head
+    clear() {
+        this.head = null;
+    }
+
+    // remove only first node of LL
+    removeFirst(){
+        if(!this.head){
+            return;
+        }
+
+        this.head = this.head.next;
+
+
+    }
 }
 
 
