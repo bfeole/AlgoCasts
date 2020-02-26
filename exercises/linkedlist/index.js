@@ -186,6 +186,11 @@ class LinkedList {
         // if we use || or if the index is out of bounds it will call this.getLast and add the new node to end of list
     }
 
+    forEach() {
+        // iterate through list
+        // do funciton on each node in list
+    }
+
 
 }
 
