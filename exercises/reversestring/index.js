@@ -59,6 +59,14 @@ function reverse(str) {
     return str.split('').reduce((rev, char) => char + rev, '');
 }
 
+// -- Debugger steps -- 
+// Add debugger statement
+// call fn manually
+// in term- run `node inspect index.js`
+// continue exec - `c` enter
+// launch a 'repl' session type `repl` enter
+// exit 'repl' `ctrl+c`
+
 reverse('asdf');
 
 module.exports = reverse;
