@@ -19,12 +19,12 @@
 // every does a boolean check on every element in an array
 // array.every((val) => val > 5)
 // double comparison issue - does 2x the work
+// How can we make it more efficent?
 
 function palindrome(str) {
    return str.split('').every((char, i)=> {
         return char === str[str.length - i - 1];
     })
-
  }
 
 module.exports = palindrome;
