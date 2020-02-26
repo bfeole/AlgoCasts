@@ -7,6 +7,24 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+
+// first pass
+// function palindrome(str) {
+//    let reverse = str.split('').reverse().join('');
+//    return (reverse === str ? true : false);
+// }
+
+// -- 2
+// every array helper
+// every does a boolean check on every element in an array
+// array.every((val) => val > 5)
+// double comparison issue - does 2x the work
+
+function palindrome(str) {
+   return str.split('').every((char, i)=> {
+        return char === str[str.length - i - 1];
+    })
+
+ }
 
 module.exports = palindrome;
