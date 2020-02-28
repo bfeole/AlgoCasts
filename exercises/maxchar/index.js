@@ -44,9 +44,13 @@ function maxChar(str) {
             }
         }
 
+        // char is assigned keys in obj chars
         for (let char in chars) {
+            // if obj[key] = value > max
             if (chars[char] > max) {
+                // set max to that value
                 max = chars[char];
+                // we return the character saved as a key as maxChar
                 maxChar = char;
             }
         }
